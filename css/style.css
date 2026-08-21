@@ -49,7 +49,7 @@
 }
 
 body{
-    font-family: 'Pretendard';
+    font-family: "Pretendard", noto sans kr ;
     color: #111111;
 }
 
@@ -629,7 +629,6 @@ header:has(.main-menu > li:hover .sub-list)::after {
     color: #ffffff;
 }
 
-/* ------------------------care------------------------- */
 /* ------------------------care------------------------- */
 .care-wrap {
     position: relative;
