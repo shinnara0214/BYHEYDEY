@@ -490,3 +490,204 @@ footer {
 .footer-inner .sub-link-list a:hover {
     color: #ffffff;
 }
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+body {
+
+    background: black;
+    /* position: relative; */
+}
+
+.btn>a {
+    background: #cacaca;
+    border-radius: 0.3em;
+    padding: 10px 20px;
+    cursor: pointer;
+    display: inline-flex;
+    gap: 10px;
+    font-size: 16px;
+
+
+}
+
+.left>img {
+    width: 825px;
+    height: 960px;
+}
+
+
+
+.right>.title-box {
+    border: 2px solid red;
+    left: 40%;
+    top: 5%;
+    display: inline-block;
+    /* position: absolute; */
+
+
+
+}
+.Office-Collection-wrap{
+    width:100%;
+    margin-bottom: 100px;
+    display:flex;
+    background: #000;
+    align-items: flex-start;
+}
+.Office-Collection-wrap>.left{
+    width:50%;
+    position: sticky;
+    top:0;
+    height: 100vh;
+    
+}
+.Office-Collection-wrap> .left >img{
+    width:100%;
+    height:100vh;
+    object-fit: cover;
+    display: block;
+}
+.Office-Collection-wrap>.right{
+    width:50%;
+    height:100%;
+    padding:70px 80px;
+    background: #000;
+    display:flex;
+    flex-direction: column;
+}
+
+/* .right>.title-box>h2 {
+    font-size: 44px;
+}
+
+.right>.title-box>.sub-title {
+    font-size: 20px;
+}
+
+.right>.title-box>.detail {
+    .pre-line {
+        white-space: pre-line;
+    }
+}
+
+.right>.title-box> {
+    display: flex;
+} */
+
+.right > .title-box {
+    border: none;
+
+    position: static;
+
+    display: block;
+
+    margin-bottom: 50px;
+}
+
+.right > .title-box > h2 {
+    margin-bottom: 8px;
+
+    font-size: 44px;
+    font-weight: 500;
+
+    color: #fff;
+}
+
+.right > .title-box > .sub-title {
+    margin-bottom: 25px;
+
+    font-size: 18px;
+    color: #fff;
+}
+
+.right > .title-box > .detail {
+    margin-bottom: 25px;
+
+    font-size: 14px;
+    line-height: 1.7;
+
+    color: #fff;
+}
+
+
+
+
+.right .btn{
+    margin: 0;
+}
+.right .btn>a{
+    display: inline-block;
+    padding: 10px 22px;
+    background: #fff;
+    color: #000;
+    border-radius: 4px;
+    font-size: 13px;
+}
+
+.right>ul{
+    width:100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap:50px;
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+.right > ul > li {
+    min-width: 0;
+}
+
+.right > ul > li > a {
+    display: block;
+}
+
+/* ----------------------------------------
+   PRODUCT IMAGE
+---------------------------------------- */
+
+.right > ul > li [class^="img-box"] {
+    width: 100%;
+    height: 360px;
+
+    overflow: hidden;
+
+    background: #f4f5f6;
+}
+
+.right > ul > li [class^="img-box"] img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+/* ----------------------------------------
+   PRODUCT TEXT
+---------------------------------------- */
+
+.right > ul .text-box {
+    margin-top: 12px;
+}
+
+.right > ul .text-box span {
+    display: block;
+
+    font-size: 13px;
+    color: #fff;
+}
+
+.right > ul .text-box p {
+    margin-top: 5px;
+
+    font-size: 12px;
+    color: #fff;
+}
