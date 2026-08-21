@@ -3,6 +3,50 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+.inner {
+    max-width: 1640px;
+    margin: 0 auto;
+}
+
+.img-box img {
+    width: 100%;
+}
+
+.title-box {
+    padding: 78px 0 0;
+}
+
+.title-box>h2 {
+    font-size: 2.75em;
+    font-weight: 600;
+    letter-spacing: -0.05em;
+}
+
+.title-box>.sub-title {
+    font-size: 1.25em;
+    font-weight: 600;
+    padding-top: 0.5em;
+    letter-spacing: 0.06em;
+}
+
+.title-box>.detail {
+    color: rgba(92, 92, 92, 0.8);
+    padding: 1.5em 0 1.5em;
+    line-height: 1.5em;
+}
+
+.btn>a {
+    display: block;
+    background: #EFF2F6;
+    border-radius: 10px;
+    border: #CACACA solid 1px;
+    color: #414040;
+    padding: 0 24px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+}
 /* -----------------hrader----------------- */
 header {
     width: 100%;
@@ -320,13 +364,6 @@ header:has(.main-menu > li:hover .sub-list)::after {
     background: #EFF2F6;
     padding: 80px 0 100px;
     /* 상하 여백 정돈 */
-}
-
-.inner {
-    max-width: 1700px;
-    height: 960px;
-    margin: 0 auto;
-    padding: 0 40px;
 }
 
 .best-wrap .title-box {
@@ -820,10 +857,55 @@ header:has(.main-menu > li:hover .sub-list)::after {
     text-align: right;
 }
 
+/* --------------------------clubmovement--------------------------- */
+.clubmovement-wrap {
+    background: #F4F7FF;
+    height: 960px;
+}
+
+.clubmovement-list {
+    margin-top: 100px;
+    /* display: flex; */
+    /* gap: 35px; */
+    /* overflow: hidden; */
+}
+
+.clubmovement-list>li {
+    position: relative;
+    /* flex: 0 0 calc((100% - 140px) / 5); */
+}
+
+.clubmovement-list>li .text-box {
+    display: block;
+    position: absolute;
+    top: 2em;
+    left: 1.5em;
+    color: #fff;
+    width: 100%;
+}
+
+.clubmovement-list>li .text-box>strong {
+    font-size: 1.25em;
+    font-weight: 600;
+}
+
+.clubmovement-list>li .text-box>p {
+    padding-top: 235px;
+    font-weight: 500;
+}
+
+.clubmovement-list>li .img-box>img {
+    border-radius: 16px;
+}
+
+.clubmovement-wrap .btn>a {
+    background: #111;
+    color: #fff;
+}
+
 /* ----------------------------------footer---------------------------------- */
 footer {
     width: 100%;
-    max-width: 1920px;
     height: 280px;
     margin: 0 auto;
     padding: 80px 140px; 
@@ -844,6 +926,7 @@ footer {
 }
 
 .footer-inner .footer-logo {
+    width: 120px;
     margin: 0 0 20px 0;
     padding: 0;
 }
