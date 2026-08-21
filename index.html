@@ -7,7 +7,7 @@
     <link rel="icon" type="byheydey/favison" href="./images/icon/favicon.png">
     <title>BYHEYDEY</title>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/font.css">
@@ -678,16 +678,18 @@
             </div>
         </section>
         <section class="care-wrap">
-            <div class="care-title-box title-box">
-                <h2 class="section-title">CARE</h2>
-                <p class="sub-title">가구의 수명을 늘리는 사후 케어의 맞춤 솔루션</p>
-                <p class="detail">사후 케어는 단순한 클리닝이 아닌, 소파의 상태와 환경, 다양한 소재를 고려한 맞춤형 케어를 제공합니다.</p>
-                <p class="btn"><a href="#">Let's Clean</a></p>
-            </div>
-            <div class="care-video-box">
-                <iframe
-                    src="https://player.vimeo.com/video/454280294?muted=1&autoplay=1&loop=1&title=0&autopause=0&background=1"
-                    frameborder="0" title="가구 케어 비디오"></iframe>
+            <div class="care-inner">
+                <div class="care-title-box title-box">
+                    <h2 class="section-title">CARE</h2>
+                    <p class="sub-title">가구의 수명을 늘리는 사후 케어의 맞춤 솔루션</p>
+                    <p class="detail">사후 케어는 단순한 클리닝이 아닌, 소파의 상태와 환경, <br> 다양한 소재를 고려한 맞춤형 케어를 제공합니다.</p>
+                    <p class="btn"><a href="#">Let's Clean</a></p>
+                </div>
+                <div class="care-video-box">
+                    <iframe
+                        src="https://player.vimeo.com/video/454280294?muted=1&autoplay=1&loop=1&title=0&autopause=0&background=1"
+                        frameborder="0" title="가구 케어 비디오"></iframe>
+                </div>
             </div>
         </section>
         <section class="project-wrap">
@@ -871,7 +873,7 @@
             loopAdditionalSlides: 4,
         });
 
-         var swiper = new Swiper('.clubmovement-list-wrap', {
+        var swiper = new Swiper('.clubmovement-list-wrap', {
             autoplay: {
                 delay: 3000,
                 disableOnInteraction: false,
@@ -881,20 +883,30 @@
             spaceBetween: 35,
         });
 
-        document.addEventListener('DOMContentLoaded', () => {
+        // document.addEventListener('DOMContentLoaded', () => {
+        //     const header = document.querySelector('header');
+
+        //     function checkScroll() {
+        //         const sliderHeight = window.innerHeight - 80;
+
+        //         if (window.scrollY > sliderHeight) {
+        //             header.classList.add('is-scrolled');
+        //         } else {
+        //             header.classList.remove('is-scrolled');
+        //         }
+        //     }
+
+        //     window.addEventListener('scroll', checkScroll);
+        // });
+        window.addEventListener('scroll', () => {
             const header = document.querySelector('header');
+            const threshold = 100; 
 
-            function checkScroll() {
-                const sliderHeight = window.innerHeight - 80;
-
-                if (window.scrollY > sliderHeight) {
-                    header.classList.add('is-scrolled');
-                } else {
-                    header.classList.remove('is-scrolled');
-                }
+            if (window.scrollY > threshold) {
+                header.classList.add('is-scrolled');
+            } else {
+                header.classList.remove('is-scrolled');
             }
-
-            window.addEventListener('scroll', checkScroll);
         });
     </script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
