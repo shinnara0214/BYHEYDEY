@@ -11,8 +11,7 @@ body {
     margin: 0 auto;
 }
 
-/* main */
-/* main 공통영역 */
+/* ----------------------------------main----------------------------------- */
 
 .title-box .section-title {
     font-size: 44px;
@@ -82,6 +81,194 @@ body {
 .best-list>li .img-box .hover-img {
     /* display: none; */
     position: absolute;
+    top: 50%;
+    right: 140px;
+    transform: translateY(-50%);
+    width: 1080px;
+    height: 608px;
+    border: none;
+    z-index: 1;
+}
+
+/* 변수 선언하기 */
+:root {
+    /* color */
+    --Primary-color: #111;
+    --Secondary-color: #fff;
+    --bg-color: #EFF2F6;
+
+    /* layout */
+    --inner-width: 1700px;
+    /* spacing */
+    /* border */
+    /* transition */
+}
+
+.inner {
+    color: var(--Primary-color);
+    margin: 0 auto;
+    max-width: var(--inner-width);
+}
+
+body {
+    font-family: "Pretendard", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.8;
+    background: var(--bg-color);
+}
+
+/* pc 에서 숨기기 */
+.ham-btn,
+.close-btn {
+    display: none;
+}
+
+/* btn 공통 */
+.btn>a {
+    border: 1px solid #fff;
+    border-radius: 10px;
+    padding: 6px 24px;
+}
+
+/* title-box 공통 */
+.title-box .section-title {
+    font-size: 2.75em;
+    font-weight: 600;
+    color: var(--Primary-color);
+}
+
+.title-box .sub-title {
+    margin: 8px 0 24px;
+    font-size: 1.25em;
+    font-weight: 600;
+    color: var(--Primary-color);
+}
+
+.title-box .detail {
+    margin-bottom: 24px;
+    color: #5c5c5c;
+    line-hiehgt: 0;
+}
+
+/* project */
+
+.project-wrap .inner {
+    display: flex;
+    gap: 50px;
+    padding: 60px 140px;
+    background: var(--Secondary-color);
+}
+
+.project-wrap .project-list-left {
+    position: relative;
+}
+
+.project-wrap .project-list-left .img-box-left {
+    height: 100%;
+}
+
+.project-wrap .project-list-left .img-box-left>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* 사진 꽉채우기 + 찌그러짐 방지 */
+}
+
+.project-wrap .project-list-left .img-box-left .img-bg {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    top: 0%;
+}
+
+.project-wrap .project-list-left .text-box-left {
+    /* background: rgba(0, 255, 0, 0.1); */
+    position: absolute;
+    bottom: 40px;
+    right: 50px;
+    font-size: 1.25em;
+    line-height: 1.3em;
+    color:var(--Secondary-color);
+}
+
+
+.project-wrap .project-list-right .title-box {
+    margin-bottom: 114px;
+}
+
+.project-wrap .project-list-right .title-box .btn>a {
+    color: #414040;
+    background-color: #EFF2F6;
+    border: 1px solid #CACACA;
+}
+
+.project-wrap .project-list-right .project-img>ul {
+    display: flex;
+    gap: 43px;
+}
+
+.project-wrap .project-list-right .project-img {
+    position: relative;
+}
+
+.project-wrap .project-list-right .project-img .img-box>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project-wrap .project-list-right .project-img .img-box {
+    position: relative;
+}
+
+.project-wrap .project-list-right .project-img .img-box .img-bg {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.project-wrap .project-list-right .project-img .text-box {
+    position: absolute;
+    /* background: pink; */
+    top: 20px;
+    transform: translateX(110px);
+    color: #fff;
+    line-height: 1.3em;
+}
+
+.project-wrap .project-list-right .project-img .text-box .space {}
+
+.project-wrap .project-list-right .project-img .text-box .location {
+    font-size: 0.88em;
+}
+
+
+/* ----------------------------------footer----------------------------------- */
+footer {
+    width: 100%;
+    max-width: 1920px;
+    height: 280px;
+    margin: 0 auto;
+    padding: 80px 140px; 
+    box-sizing: border-box;
+    background-color: #000000;
+}
+
+.footer-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.footer-inner .address-left {
+    display: flex;
+    flex-direction: column;
     top: 0;
     left: 0;
     opacity: 0;
