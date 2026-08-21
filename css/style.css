@@ -47,6 +47,12 @@
     display: inline-flex;
     align-items: center;
 }
+
+body{
+    font-family: "Pretendard", noto sans kr ;
+    color: #111111;
+}
+
 /* -----------------hrader----------------- */
 header {
     width: 100%;
@@ -623,7 +629,6 @@ header:has(.main-menu > li:hover .sub-list)::after {
     color: #ffffff;
 }
 
-/* ------------------------care------------------------- */
 /* ------------------------care------------------------- */
 .care-wrap {
     position: relative;
