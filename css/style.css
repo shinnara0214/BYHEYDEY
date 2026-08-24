@@ -674,111 +674,113 @@ header:has(.main-menu > li:hover .sub-list)::after {
     z-index: 1;
 }
 /* -----------------------project-------------------------- */
-.project-wrap {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    padding: 80px 140px;
-    background-color: #fff;
+.project-wrap .inner {
+    display: flex;
+    gap: 50px;
+    padding: 60px 140px;
+    background: var(--Secondary-color);
 }
 
-.project-wrap .title-box {
+.project-wrap .project-list-left {
+    position: relative;
+}
+
+.project-wrap .project-list-left .img-box-left {
+    height: 100%;
+    overflow: hidden;
+}
+
+
+.project-wrap .project-list-left .img-box-left>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* 사진 꽉채우기 + 찌그러짐 방지 */
+    transition: transform 0.4s ease;
+}
+
+.project-wrap .project-list-left .img-box-left:hover>img {
+    transform: scale(1.04);
+}
+
+.project-wrap .project-list-left .img-box-left .img-bg {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
     position: absolute;
-    top:80px;
-    left: 45%;
-    z-index: 10;
+    top: 0%;
+}
+
+.project-wrap .project-list-left .text-box-left {
+    /* background: rgba(0, 255, 0, 0.1); */
+    position: absolute;
+    bottom: 40px;
+    right: 50px;
+    font-size: 1.25em;
+    line-height: 1.5em;
+    color: #fff;
+}
+
+
+.project-wrap .project-list-right .btn a:hover {
+    background-color: #111;
+    color: #fff;
 }
 
 .project-wrap .title-box .btn a {
     transition: all 0.3s ease;
 }
 
-.project-wrap .btn a:hover {
-    background-color: #111;
-    color: #fff;
-}
 
-.project-wrap .img-box {
+.project-wrap .project-list-right .project-img>ul {
     display: flex;
-    justify-content: flex-start;
     gap: 43px;
-    align-items: flex-end;
-    width: 100%;
-    height: 100%;
+    margin-top: 114px;
 }
 
-.project-wrap .img-box a {
+.project-wrap .project-list-right .project-img {
     position: relative;
-    display: block;
-    overflow: hidden;
 }
 
-.project-wrap .img-box a::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.3); 
-    pointer-events: none; 
-    transition: background-color 0.3s ease;
-}
-
-.project-wrap .img-box a img {
+.project-wrap .project-list-right .project-img .img-box>img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    display: block;
     transition: transform 0.4s ease;
 }
 
-.project-wrap .img-box a:hover img {
+.project-wrap .project-list-right .project-img .img-box {
+    position: relative;
+    overflow: hidden;
+}
+
+.project-wrap .project-list-right .project-img .img-box .img-bg {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+.project-wrap .project-list-right .project-img .img-box:hover>img {
     transform: scale(1.04);
 }
 
-.project-wrap .img-box a p {
+.project-wrap .project-list-right .project-img .text-box {
     position: absolute;
-    color: #fff;
-    font-weight: 700;
-    line-height: 1.35;
-    z-index: 5;
-    /* margin: 0; */
-    pointer-events: none;
-    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
-}
-
-.project-wrap .img-box .item-main {
-    width: 616px;
-    height: 835px;
-    flex-shrink: 0;
-}
-
-.project-wrap .img-box .item-main p {
-    left: auto;
-    right: 40px;
-    bottom: 40px;
-    font-size: 1.25em;
-    text-align: right;
-}
-
-.project-wrap .img-box .sub-group {
-    display: flex;
-    gap: 43px;
-    flex-shrink: 0;
-}
-
-.project-wrap .img-box .item-sub {
-    width: 298px;
-    height: 380px;
-    flex-shrink: 0;
-}
-
-.project-wrap .img-box .item-sub p {
+    /* background: pink; */
     top: 20px;
-    right: 20px;
+    transform: translateX(110px);
+    color: #fff;
+    line-height: 1.5em;
+}
+
+.project-wrap .project-list-right .project-img .text-box .space {}
+
+.project-wrap .project-list-right .project-img .text-box .location {
     font-size: 0.88em;
-    text-align: right;
 }
 
 /* --------------------------clubmovement--------------------------- */
