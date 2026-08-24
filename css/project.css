@@ -1,54 +1,64 @@
-.inner {
-    max-width: 1700px;
-    margin: 0 auto;
+/* 공통사항 */
+:root {
+    /* Color Variables */
+    --primary-color: #111111;
+    --secondary-color: #ffffff;
+    --bg-color: #EFF2F6;
+    --sub-text-color: rgba(92, 92, 92, 0.8);
+    --border-color: #CACACA;
+
+    /* Layout Variables */
+    --inner-width: 1640px; /* source 1, 2 기준 (source 3: 1700px) */
 }
 
-body{
+body {
+    max-width: 100%;
+    margin: 0 auto;
     font-family: "Pretendard", sans-serif;
     font-size: 16px;
     font-weight: 400;
     line-height: 1.8;
+    color: var(--primary-color);
+    background-color: var(--bg-color);
+}
+
+.inner {
+    max-width: var(--inner-width);
+    margin: 0 auto;
 }
 
 .img-box img {
     width: 100%;
 }
 
-/* title-box 공통 */
-
-.title-box {
-    padding: 78px 0 0;
-}
-
-.title-box>h2 {
-    font-size: 2.75em;
+.title-box .section-title {
+    font-size: 2.75em; /* 44px */
     font-weight: 600;
     letter-spacing: -0.05em;
 }
 
 .title-box .sub-title {
-    font-size: 1.25em;
+    font-size: 1.25em; /* 20px */
     font-weight: 600;
-    padding-top: 0.5em;
     letter-spacing: 0.06em;
+    line-height: 1.6;
+    padding-top: 0.5em;
 }
 
-.title-box>.detail {
-    color: rgba(92, 92, 92, 0.8);
-    padding: 1.5em 0 1.5em;
+.title-box .detail {
+    color: var(--sub-text-color);
     line-height: 1.5em;
+    padding: 1.5em 0;
 }
-
-/* btn 공통 */
 
 .btn>a {
-    display: inline-flex;
-    background: #EFF2F6;
+    background: var(--bg-color);
     border-radius: 10px;
-    border: #CACACA solid 1px;
+    border: var(--border-color) solid 1px;
     color: #414040;
     padding: 0 24px;
     height: 40px;
+    display: inline-flex;
     align-items: center;
 }
 
@@ -64,7 +74,7 @@ body{
 
 .project-wrap .title-box {
     position: absolute;
-    top: 80px;
+    top:80px;
     left: 799px;
     z-index: 10;
 }
