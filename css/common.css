@@ -1,60 +1,47 @@
-:root {
-    /* Color Variables */
-    --primary-color: #111111;
-    --secondary-color: #ffffff;
-    --bg-color: #EFF2F6;
-    --sub-text-color: rgba(92, 92, 92, 0.8);
-    --border-color: #CACACA;
+/* 공통사항 */
 
-    /* Layout Variables */
-    --inner-width: 1640px;
-    /* source 1, 2 기준 (source 3: 1700px) */
+/* 모든요소의 여백제거 */
+*,
+*::before,
+*::after{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-body {
-    max-width: 100%;
-    margin: 0 auto;
-    font-family: "Pretendard", sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-    color: var(--primary-color);
-    background-color: var(--bg-color);
+/* li장식제거 */
+li{
+list-style: none;
 }
-
-.inner {
-    max-width: 1640px;
-    margin: 0 auto;
+/* a밑줄제거,글자색 */
+a{
+    color:inherit;
+    text-decoration: none;
 }
-
-.title-box .section-title {
-    font-size: 2.75em;
-    /* 44px */
-    font-weight: 600;
-    letter-spacing: -0.05em;
+/* img,video */
+img,video{
+    max-width:100%;
+    width:100%;
+    vertical-align:middle;
 }
-
-.title-box>.sub-title {
-    font-size: 1.25em;
-    /* 20px */
-    font-weight: 600;
-    letter-spacing: 0.06em;
-    line-height: 1.6;
-    padding-top: 0.5em;
+/* em,i,address */
+em,i,address{
+    font-style:normal;
 }
-
-.title-box>.detail {
-    color: var(--sub-text-color);
-    line-height: 1.5em;
-    padding: 1.5em 0;
+/* button 테두리제거, 배경제거,커서마우스 */
+button{
+    border:0;
+    background:none;
+    cursor: pointer;
 }
-
-.btn>a {
-    background: var(--bg-color);
-    border-radius: 10px;
-    border: var(--border-color) solid 1px;
-    color: #414040;
-    padding: 0 24px;
-    height: 40px;
-    display: inline-flex;
-    align-items: center;
+/* blind 화면에서 보이지는 않지만
+ 리더기를 통해서 읽혀지도록*/
+.blind{
+    position: absolute;
+    top:-9999px;
 }
+/* iframe */
+iframe{
+    border:0;
+}
+/* skip */
