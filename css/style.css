@@ -75,13 +75,11 @@ header:hover {
 
 header.is-scrolled {
     background-color: #111;
-    color:transparent;
     box-shadow: 0 0 20px #fff;
 }
 
 header.is-scrolled:hover {
     background-color: #111;
-    color:transparent;
     box-shadow: 0 0 20px #fff;
 }
 
