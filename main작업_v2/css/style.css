@@ -1,0 +1,142 @@
+/* --------------------main 공통 영역----------------- */
+:root {
+    /* Color Variables */
+    --primary-color: #111111;
+    --secondary-color: #ffffff;
+    --bg-color: #EFF2F6;
+    --sub-text-color: rgba(92, 92, 92, 0.8);
+    --border-color: #CACACA;
+
+    /* Layout Variables */
+    --inner-width: 1640px;
+    /* source 1, 2 기준 (source 3: 1700px) */
+}
+
+body {
+    max-width: 100%;
+    margin: 0 auto;
+    font-family: "Pretendard", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--primary-color);
+    background-color: var(--bg-color);
+}
+
+.inner {
+    max-width: 1640px;
+    margin: 0 auto;
+}
+
+.title-box .section-title {
+    font-size: 2.75em;
+    /* 44px */
+    font-weight: 600;
+    letter-spacing: -0.05em;
+}
+
+.title-box>.sub-title {
+    font-size: 1.25em;
+    /* 20px */
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    line-height: 1.6;
+    padding-top: 0.5em;
+}
+
+.title-box>.detail {
+    color: var(--sub-text-color);
+    line-height: 1.5em;
+    padding: 1.5em 0;
+}
+
+.btn>a {
+    background: var(--bg-color);
+    border-radius: 10px;
+    border: var(--border-color) solid 1px;
+    color: #414040;
+    padding: 0 24px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+}
+/* --------------------main 공통 영역----------------- */
+
+/* best-wrap */
+.best-wrap .inner {
+    height: 60em;
+}
+
+.best-wrap .title-box {
+    text-align: center;
+    padding: 4.88em 0 3.88em;
+}
+
+.best-wrap .title-box>h2 {
+    font-size: 2.75em;
+    font-weight: 600;
+}
+
+.best-wrap .title-box .sub-title {
+    font-size: 1.25em;
+    padding: 0.63em 0 0;
+    font-weight: 600;
+    color: #111111;
+    letter-spacing: 0.06em;
+}
+
+.best-list>li .img-box .hover-img {
+    /* display: none; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.best-list>li:hover .img-box .hover-img {
+    opacity: 1;
+}
+
+
+.best-wrap .text-box {
+    padding: 1.06em 1.25em 0;
+}
+
+.best-list .text-box .item-name {
+    font-size: 1.06em;
+    font-weight: 500;
+}
+
+.best-list .text-box .price {
+    margin: 0.5em 0;
+    font-size: 0.94em;
+}
+
+.best-list .text-box .item-color>span {
+    display: inline-flex;
+    gap: 0.5em;
+    background-color: #111111;
+    width: 0.88em;
+    height: 0.88em;
+    border-radius: 50%;
+}
+
+.best-list .text-box .item-color .black {
+    background-color: #2F2F2F
+}
+
+.best-list .text-box .item-color .gray {
+    background-color: #626260
+}
+
+.best-list .text-box .item-color .brown {
+    background-color: #B4866D;
+}
+
+.best-list .text-box .item-color .ivory {
+    background-color: #E3DFDC;
+}
+
+@media screen () {
+    
+}
