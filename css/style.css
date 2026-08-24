@@ -747,8 +747,8 @@ header:has(.main-menu > li:hover .sub-list)::after {
 
 .project-wrap .title-box {
     position: absolute;
-    top:80px;
-    left: 799px;
+    top:85px;
+    left: 950px;
     z-index: 10;
 }
 
