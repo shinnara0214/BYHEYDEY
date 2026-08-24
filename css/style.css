@@ -25,10 +25,6 @@ body {
     margin: 0 auto;
 }
 
-.img-box img {
-    width: 100%;
-}
-
 .title-box .section-title {
     font-size: 2.75em;
     /* 44px */
@@ -62,7 +58,6 @@ body {
     align-items: center;
 }
 
-
 /* -----------------header----------------- */
 header {
     width: 100%;
@@ -80,13 +75,11 @@ header:hover {
 
 header.is-scrolled {
     background-color: #111;
-    color:transparent;
     box-shadow: 0 0 20px #fff;
 }
 
 header.is-scrolled:hover {
     background-color: #111;
-    color:transparent;
     box-shadow: 0 0 20px #fff;
 }
 
@@ -381,126 +374,92 @@ header:has(.main-menu > li:hover .sub-list)::after {
     opacity: 80%;
 }
 
-/* ---------------------best------------------- */
-.best-wrap {
-    position: relative;
-    z-index: 1;
-    clear: both;
-    background: #EFF2F6;
-    padding: 80px 0 100px;
-    /* 상하 여백 정돈 */
+
+/* best-wrap */
+.best-wrap .inner {
+    height: 60em;
 }
 
 .best-wrap .title-box {
     text-align: center;
-    margin-bottom: 50px;
+    padding: 4.88em 0 3.88em;
 }
 
-.best-wrap .title-box h2 {
-    font-size: 44px;
-    font-weight: 700;
+.best-wrap .title-box>h2 {
+    font-size: 2.75em;
+    font-weight: 600;
+}
+
+.best-wrap .title-box .sub-title {
+    font-size: 1.25em;
+    padding: 0.63em 0 0;
+    font-weight: 600;
     color: #111111;
-    line-height: 1.2;
+    letter-spacing: 0.06em;
 }
 
-.best-wrap .title-box p {
-    font-size: 20px;
-    font-weight: 500;
-    color: #555555;
-    margin-top: 12px;
-}
-
-.main-list-wrap {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 40px 12px;
-}
-
-.item {
-    flex: 0 0 calc((100% - 48px) / 5);
-}
-
-.item .img-box {
-    position: relative;
-    overflow: hidden;
-    border-radius: 8px;
-}
-
-.item .img-box img {
-    width: 100%;
-    display: block;
-}
-
-.item .hover-img {
+.best-list>li .img-box .hover-img {
+    /* display: none; */
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
     opacity: 0;
-    transition: opacity 0.3s ease;
-    z-index: 2;
-    pointer-events: none;
+    transition: 0.3s;
 }
 
-.item .hover-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.item:hover .hover-img {
+.best-list>li:hover .img-box .hover-img {
     opacity: 1;
 }
 
-.item .text-box {
-    margin-top: 16px;
+
+.best-wrap .text-box {
+    padding: 1.06em 1.25em 0;
 }
 
-.color {
-    display: flex;
-    gap: 6px;
-    margin-top: 10px;
+.best-list .text-box .item-name {
+    font-size: 1.06em;
+    font-weight: 500;
 }
 
-.color>li {
-    width: 12px;
-    height: 12px;
+.best-list .text-box .price {
+    margin: 0.5em 0;
+    font-size: 0.94em;
+}
+
+.best-list .text-box .item-color>span {
+    display: inline-flex;
+    gap: 0.5em;
+    background-color: #111111;
+    width: 0.88em;
+    height: 0.88em;
     border-radius: 50%;
-    list-style: none;
-    text-indent: -9999px;
 }
 
-.color>.black {
-    background-color: #000;
+.best-list .text-box .item-color .black {
+    background-color: #2F2F2F
 }
 
-.color>.gray {
-    background-color: #626260;
+.best-list .text-box .item-color .gray {
+    background-color: #626260
 }
 
-.color>.brown {
+.best-list .text-box .item-color .brown {
     background-color: #B4866D;
 }
 
-.color>.ivory {
+.best-list .text-box .item-color .ivory {
     background-color: #E3DFDC;
-}
-
-.color>.white {
-    background-color: #fff;
-    border: 1px solid #ddd;
 }
 
 /* -----------------office-------------------- */
 .office-collection-wrap {
     width: 100%;
-    /* max-width: 1920px; */
+    max-width: none;
     height: 960px;
-    margin: 0 auto;
+    margin-left: calc(50% - 50vw);
     background-color: #000000;
     overflow: hidden;
-}
+}   
 
 .office-inner {
     display: flex;
@@ -516,8 +475,8 @@ header:has(.main-menu > li:hover .sub-list)::after {
 
 .office-left .office-main-img-box,
 .office-left .office-main-img-box img {
-    width: 825px;
-    height: 960px;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     display: block;
 }
@@ -525,7 +484,7 @@ header:has(.main-menu > li:hover .sub-list)::after {
 .office-right {
     width: 50%;
     height: 100%;
-    padding: 80px 60px 80px 80px;
+    padding: 125px 152px 80px 152px;
     box-sizing: border-box;
 
     overflow-y: auto;
@@ -540,7 +499,7 @@ header:has(.main-menu > li:hover .sub-list)::after {
 }
 
 .office-right .office-title-area {
-    margin-bottom: 48px;
+    margin-bottom: 52px;
 }
 
 .office-right .section-title {
@@ -593,17 +552,28 @@ header:has(.main-menu > li:hover .sub-list)::after {
 }
 
 .product-list {
-    display: flex;
+    /* display: flex;
     flex-wrap: wrap;
     gap: 40px 20px;
     list-style: none;
-    padding: 0 0 80px 0;
+    padding: 0 0 80px ;
+    margin: 0;
+    column-gap: 151px;
+    row-gap: 40px; */
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 151px;
+    row-gap: 40px;
+
+    list-style: none;
+    padding: 0 0 80px;
     margin: 0;
 }
 
 .product-item {
-    width: calc(50% - 10px);
-    flex-shrink: 0;
+    /* width: calc(50% - 10px);
+    flex-shrink: 0; */
+    width:auto;
 }
 
 .product-item .product-link {
@@ -614,6 +584,7 @@ header:has(.main-menu > li:hover .sub-list)::after {
 
 .product-item .img-box {
     width: 100%;
+    max-width: 320px;
     aspect-ratio: 3 / 4;
     background-color: #f2f2f2;
     border-radius: 8px;
@@ -625,9 +596,10 @@ header:has(.main-menu > li:hover .sub-list)::after {
 
 .product-item .img-box img {
     width: 100%;
-    height: 100%;
+    
+    /* height: 100%; */
     object-fit: contain;
-    padding: 20px;
+    /* padding: 20px; */
     box-sizing: border-box;
     display: block;
 }
@@ -810,21 +782,18 @@ header:has(.main-menu > li:hover .sub-list)::after {
 }
 
 /* --------------------------clubmovement--------------------------- */
+
+.clubmovement-wrap .title-box {
+    padding: 78px 0 100px;
+}
+
 .clubmovement-wrap {
     background: #F4F7FF;
     height: 960px;
 }
 
-.clubmovement-list {
-    margin-top: 100px;
-    /* display: flex; */
-    /* gap: 35px; */
-    /* overflow: hidden; */
-}
-
 .clubmovement-list>li {
     position: relative;
-    /* flex: 0 0 calc((100% - 140px) / 5); */
 }
 
 .clubmovement-list>li .text-box {
@@ -842,12 +811,12 @@ header:has(.main-menu > li:hover .sub-list)::after {
 }
 
 .clubmovement-list>li .text-box>p {
-    padding-top: 235px;
+    padding-top: 14.69em;
     font-weight: 500;
 }
 
 .clubmovement-list>li .img-box>img {
-    border-radius: 16px;
+    border-radius: 10px;
 }
 
 .clubmovement-wrap .btn>a {
