@@ -771,21 +771,18 @@ header:has(.main-menu > li:hover .sub-list)::after {
 }
 
 /* --------------------------clubmovement--------------------------- */
+
+.clubmovement-wrap .title-box {
+    padding: 78px 0 100px;
+}
+
 .clubmovement-wrap {
     background: #F4F7FF;
     height: 960px;
 }
 
-.clubmovement-list {
-    margin-top: 100px;
-    /* display: flex; */
-    /* gap: 35px; */
-    /* overflow: hidden; */
-}
-
 .clubmovement-list>li {
     position: relative;
-    /* flex: 0 0 calc((100% - 140px) / 5); */
 }
 
 .clubmovement-list>li .text-box {
@@ -803,12 +800,12 @@ header:has(.main-menu > li:hover .sub-list)::after {
 }
 
 .clubmovement-list>li .text-box>p {
-    padding-top: 235px;
+    padding-top: 14.69em;
     font-weight: 500;
 }
 
 .clubmovement-list>li .img-box>img {
-    border-radius: 16px;
+    border-radius: 10px;
 }
 
 .clubmovement-wrap .btn>a {
