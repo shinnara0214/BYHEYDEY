@@ -1310,14 +1310,6 @@ footer {
         flex-direction: column-reverse;
     }
 
-    .project-wrap .project-list-right .project-img>ul {
-        display: grid;
-        grid-template-columns: repeat(2, (0, 1fr));
-        gap: 16px;
-        margin-top: 44px;
-    }
-
-
     .project-wrap .project-list-left .img-box-left {
         position: relative;
         width: 100%;
@@ -1340,8 +1332,7 @@ footer {
         pointer-events: none;
     }
 
-    .project-wrap .project-list-left .text-box-left,
-    .project-wrap .project-list-right .project-img .text-box {
+    .project-wrap .project-list-left .text-box-left{
         position: static;
         width: 100%;
         height: auto;
@@ -1354,6 +1345,9 @@ footer {
         font-size: 1em;
     }
 
+    .project-wrap .project-list-right .project-img{
+        display: none;
+    }
 
     /* club movement */
     .clubmovement-wrap {

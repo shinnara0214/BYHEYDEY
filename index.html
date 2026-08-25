@@ -703,12 +703,13 @@
         });
 
         var swiper = new Swiper('.best', {
+            loop: true,
             autoplay: {
                 delay: 3000,
-                disableOnInteraction: false,
+                disableOnInteraction: false, 
             },
-            loop: true,
-             slidesPerView: 2,
+
+            slidesPerView: 2,
             spaceBetween: 12,
             centeredSlides: false,
 
@@ -725,6 +726,7 @@
                     slidesPerView: 5, 
                     spaceBetween: 36,
                 },
+            },
         });
 
         var swiper = new Swiper('.clubmovement-list-wrap', {

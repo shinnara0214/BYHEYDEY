@@ -449,6 +449,7 @@ header:has(.main-menu > li:hover .sub-list)::after {
 
 .best-list .text-box .item-color .ivory {
     background-color: #E3DFDC;
+}
 
 /* -----------------office-------------------- */
 .office-collection-wrap {
@@ -1080,14 +1081,6 @@ footer {
         flex-direction: column-reverse;
     }
 
-    .project-wrap .project-list-right .project-img>ul {
-        display: grid;
-        grid-template-columns: repeat(2, (0, 1fr));
-        gap: 16px;
-        margin-top: 44px;
-    }
-
-
     .project-wrap .project-list-left .img-box-left {
         position: relative;
         width: 100%;
@@ -1122,6 +1115,10 @@ footer {
 
     .project-wrap .project-list-left .text-box-left {
         font-size: 1em;
+    }
+    
+    .project-wrap .project-list-right .project-img{
+        display: none;
     }
 }
 
