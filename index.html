@@ -708,9 +708,23 @@
                 disableOnInteraction: false,
             },
             loop: true,
-            slidesPerView: 4.5,
-            spaceBetween: 36,
-            // centeredSlides: true,
+             slidesPerView: 2,
+            spaceBetween: 12,
+            centeredSlides: false,
+
+            breakpoints: {
+                768: {
+                    slidesPerView: 3,  
+                    spaceBetween: 18,
+                },
+                1024: {
+                    slidesPerView: 4,  
+                    spaceBetween: 24,
+                },
+                1400: {
+                    slidesPerView: 5, 
+                    spaceBetween: 36,
+                },
         });
 
         var swiper = new Swiper('.clubmovement-list-wrap', {
