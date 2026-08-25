@@ -27,9 +27,6 @@ body {
     margin: 0 auto;
 }
 
-.img-box img {
-    width: 100%;
-}
 
 .title-box .section-title {
     font-size: 2.75em; /* 44px */
@@ -64,7 +61,91 @@ body {
 
 
 /* project-wrap */
-.project-wrap {
+.project-wrap .inner{
+    display: flex;
+    gap: 50px;
+    padding: 60px 140px;
+    background: var(--Secondary-color);
+}
+
+.project-wrap .project-list-left {
+    position: relative;
+}
+
+.project-wrap .project-list-left .img-box-left {
+    height: 100%;
+}
+
+.project-wrap .project-list-left .img-box-left>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* 사진 꽉채우기 + 찌그러짐 방지 */
+}
+
+.project-wrap .project-list-left .img-box-left .img-bg {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    top: 0%;
+}
+
+.project-wrap .project-list-left .text-box-left {
+    /* background: rgba(0, 255, 0, 0.1); */
+    position: absolute;
+    bottom: 40px;
+    right: 50px;
+    font-size: 1.25em;
+    line-height: 1.3em;
+    color:var(--Secondary-color);
+}
+
+
+.project-wrap .project-list-right .project-img>ul {
+    display: flex;
+    gap: 43px;
+}
+
+.project-wrap .project-list-right .project-img {
+    position: relative;
+}
+
+.project-wrap .project-list-right .project-img .img-box>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project-wrap .project-list-right .project-img .img-box {
+    position: relative;
+}
+
+.project-wrap .project-list-right .project-img .img-box .img-bg {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.project-wrap .project-list-right .project-img .text-box {
+    position: absolute;
+    /* background: pink; */
+    top: 20px;
+    transform: translateX(110px);
+    color: #fff;
+    line-height: 1.3em;
+}
+
+.project-wrap .project-list-right .project-img .text-box .space {}
+
+.project-wrap .project-list-right .project-img .text-box .location {
+    font-size: 0.88em;
+}
+
+/* .project-wrap {
     position: relative;
     width: 100%;
     height: 100%;
@@ -74,7 +155,7 @@ body {
 
 .project-wrap .title-box {
     position: absolute;
-    top:80px;
+    top: 80px;
     left: 45%;
     z-index: 10;
 }
@@ -110,8 +191,8 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.3); 
-    pointer-events: none; 
+    background-color: rgba(0, 0, 0, 0.3);
+    pointer-events: none;
     transition: background-color 0.3s ease;
 }
 
@@ -133,7 +214,6 @@ body {
     font-weight: 700;
     line-height: 1.35;
     z-index: 5;
-    /* margin: 0; */
     pointer-events: none;
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
 }
@@ -169,4 +249,11 @@ body {
     right: 20px;
     font-size: 0.88em;
     text-align: right;
-}
+} */
+
+
+
+
+
+
+
