@@ -938,6 +938,24 @@ footer {
         display: none;
     }
 
+    
+    .ham-btn {
+        display: block;
+    }
+
+    .header-inner nav {
+        position: fixed;
+        right: -100%;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        padding: 1em 1.5em;
+        background: #111;
+        color: #fff;
+        z-index: 20000;
+    }
+    
+    /*--------office--------  */
      .office-collection-wrap{
         /* height: 720px; */
         height:70vw;
@@ -988,6 +1006,40 @@ footer {
         font-size: 13px;
     }
 
+    /* --------project-------- */
+    .project-wrap .inner {
+        padding: 60px 30px;
+        gap: 32px;
+    }
+
+    .project-wrap .project-list-left,
+    .project-wrap .project-list-right {
+        min-width: 0;
+    }
+
+    .project-wrap .project-list-right .project-img>ul {
+        gap: 20px;
+        margin-top: 72px;
+    }
+
+
+    .project-wrap .project-list-right .project-img .text-box {
+        top: 16px;
+        transform: translateX(65px);
+    }
+
+    .project-wrap .project-list-left .img-box-left:hover>img,
+    .project-wrap .project-list-right .project-img .img-box:hover>img,
+    .best-list>li:hover .img-box .hover-img {
+        transform: none;
+    }
+
+    .project-wrap .project-list-right .btn a:hover {
+        background: var(--bg-color);
+        color: #414040;
+    }
+
+
     .clubmovement-wrap .title-box {
         padding-left: 30px;
     }
@@ -997,23 +1049,6 @@ footer {
         flex-direction: column;
         gap: 48px;
     }
-
-    .ham-btn {
-        display: block;
-    }
-
-    .header-inner nav {
-        position: fixed;
-        right: -100%;
-        width: 100%;
-        height: 100vh;
-        top: 0;
-        padding: 1em 1.5em;
-        background: #111;
-        color: #fff;
-        z-index: 20000;
-    }
-
 
 
 }
@@ -1032,8 +1067,61 @@ footer {
         display: block;
         flex-direction: column;
     }
+
+    /* ------office------*/
      .office-left{
         display: none;
+    }
+
+    /* ------project------*/
+    .project-wrap .inner {
+        display: flex;
+        padding: 56px 20px 64px;
+        flex-direction: column-reverse;
+    }
+
+    .project-wrap .project-list-right .project-img>ul {
+        display: grid;
+        grid-template-columns: repeat(2, (0, 1fr));
+        gap: 16px;
+        margin-top: 44px;
+    }
+
+
+    .project-wrap .project-list-left .img-box-left {
+        position: relative;
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+    }
+
+    .project-wrap .project-list-left .img-box-left>img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .project-wrap .project-list-left .img-box-left .img-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+    }
+
+    .project-wrap .project-list-left .text-box-left,
+    .project-wrap .project-list-right .project-img .text-box {
+        position: static;
+        width: 100%;
+        height: auto;
+        padding-top: 10px;
+        transform: none;
+        color: #111;
+    }
+
+    .project-wrap .project-list-left .text-box-left {
+        font-size: 1em;
     }
 }
 
