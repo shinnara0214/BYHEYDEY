@@ -718,9 +718,25 @@
                 delay: 3000,
                 disableOnInteraction: false,
             },
+            centeredSlides: false,
             loop: true,
-            slidesPerView: 5,
-            spaceBetween: 35,
+            breakpoints: {
+                1279: {
+                    slidesPerView: 5,
+                    spaceBetween: 35,
+                    centeredSlides: false,
+                },
+                768: {
+                    slidesPerView: 3,
+                    spaceBetween: 30,
+                    centeredSlides: false,
+                },
+                0: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                    centeredSlides: false,
+                },
+            },
         });
 
         // document.addEventListener('DOMContentLoaded', () => {
