@@ -1037,13 +1037,6 @@ footer {
     color: #ffffff;
 }
 
-@media screen and (max-width:1440px) {
-    .clubmovement-list>li {
-        flex: 0 0 calc((100% - 6.56em) / 4);
-        overflow: hidden;
-    }
-}
-
 /* 아이패드 */
 @media screen and (max-width:1279px) {
     body {
@@ -1051,7 +1044,7 @@ footer {
     }
 
     .main-menu {
-        /* display: none; */
+        display: none;
     }
 
     .gnb-list {
@@ -1062,10 +1055,6 @@ footer {
         padding-left: 30px;
     }
 
-    .clubmovement-list>li {
-        flex: 0 0 calc((100% - 4.38em) / 3);
-        overflow: hidden;
-    }
 
     .footer-inner {
         flex-direction: column;
@@ -1083,9 +1072,9 @@ footer {
         height: 100vh;
         top: 0;
         padding: 1em 1.5em;
-        flex-direction: column;
-        background-color: #111;
+        background: #111;
         color: #fff;
+        z-index: 20000;
     }
 
 
@@ -1096,11 +1085,6 @@ footer {
 @media screen and (max-width:767px) {
     body {
         font-size: 12px;
-    }
-
-    .clubmovement-list>li {
-        flex: 0 0 calc((100% - 2.19em) / 2);
-        overflow: hidden;
     }
 
     .address-right>.footer-menu {

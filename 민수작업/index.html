@@ -7,7 +7,7 @@
     <link rel="icon" type="byheydey/favison" href="./images/icon/favicon.png">
     <title>BYHEYDEY</title>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/font.css">
@@ -872,15 +872,30 @@
             loopAdditionalSlides: 4,
         });
 
-         var swiper = new Swiper('.clubmovement-list-wrap', {
-            // autoplay: {
-            //     delay: 3000,
-            //     disableOnInteraction: false,
-            // },
+        var swiper = new Swiper('.clubmovement-list-wrap', {
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
             centeredSlides: false,
             loop: true,
-            slidesPerView: 5,
-            spaceBetween: 35,
+            breakpoints: {
+                1279: {
+                    slidesPerView: 5,
+                    spaceBetween: 35,
+                    centeredSlides: false,
+                },
+                768: {
+                    slidesPerView: 3,
+                    spaceBetween: 30,
+                    centeredSlides: false,
+                },
+                0: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                    centeredSlides: false,
+                },
+            },
         });
 
         document.addEventListener('DOMContentLoaded', () => {
