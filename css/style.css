@@ -776,6 +776,7 @@ header:has(.main-menu > li:hover .sub-list)::after {
     transform: translateX(110px);
     color: #fff;
     line-height: 1.5em;
+    font-size: clamp(10px, 1.2vw, 16px);
 }
 
 .project-wrap .project-list-right .project-img .text-box .space {}
