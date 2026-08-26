@@ -787,12 +787,11 @@ header:has(.main-menu > li:hover .sub-list)::after {
 /* --------------------------clubmovement--------------------------- */
 
 .clubmovement-wrap .title-box {
-    padding: 78px 0 100px;
+    padding: 4.88em 0 6.25em;
 }
 
 .clubmovement-wrap {
     background: #F4F7FF;
-    height: 960px;
 }
 
 .clubmovement-list>li {
@@ -800,12 +799,16 @@ header:has(.main-menu > li:hover .sub-list)::after {
 }
 
 .clubmovement-list>li .text-box {
-    display: block;
     position: absolute;
-    top: 2em;
-    left: 1.5em;
-    color: #fff;
     width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2em 1.5em;
+    color: #fff;
+    top: 0;
+    left: 0;
 }
 
 .clubmovement-list>li .text-box>strong {
@@ -814,7 +817,6 @@ header:has(.main-menu > li:hover .sub-list)::after {
 }
 
 .clubmovement-list>li .text-box>p {
-    padding-top: 14.69em;
     font-weight: 500;
 }
 
@@ -825,6 +827,10 @@ header:has(.main-menu > li:hover .sub-list)::after {
 .clubmovement-wrap .btn>a {
     background: #111;
     color: #fff;
+}
+
+.clubmovement-list-wrap {
+    padding-bottom: 11.31em;
 }
 
 /* ----------------------------------footer---------------------------------- */
