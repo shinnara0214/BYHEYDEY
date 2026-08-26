@@ -1,0 +1,112 @@
+@media screen and (max-width:1279px) {
+    body {
+        font-size: 14px;
+    }
+
+    header:has(.sub-list:hover)::after,
+    header:has(.main-menu > li:hover .sub-list)::after {
+        opacity: 0;
+    }
+
+    main,
+    footer {
+        /* display: none; */
+    }
+
+    .gnb-list {
+        display: none;
+    }
+
+    .m-header {
+        display: block;
+        padding: 1em;
+    }
+
+    .m-header>div {}
+
+    .m-header>div button {
+        position: absolute;
+        right: 1.5em;
+        color: #fff;
+        font-size: 20px;
+        /* 햄버거 배경 */
+    }
+    .m-header>div button.close {
+        /* close 배경 */
+    }
+
+    .m-header>div p {
+        text-align: center;
+
+    }
+
+    .m-header>div p img {
+        width: 120px;
+    }
+
+    nav {
+        position: fixed;
+        width: 100%;
+        right: 0%;
+        top: 0;
+        background: #000;
+    }
+
+    .main-menu {
+        flex-direction: column;
+        gap: 0;
+
+    }
+
+    .main-menu>li>a {
+        line-height: 1.5;
+        border-bottom: 1px solid #999;
+        padding: 1em;
+        /* 화살표 */
+    }
+
+    .main-menu>.active>a {
+        /* 반대화살표 */
+    }
+
+    .sub-list {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        /* display: none; */
+        background: #333;
+    }
+
+}
+
+@media screen and (max-width:767px) {
+    body {
+        font-size: 12px;
+    }
+
+    .sub-list {
+        /* flex-direction: column;
+        gap: 1em; */
+        display: block;
+        padding: 0;
+    }
+
+    .sub-list>li>a {
+        padding: 1em 2em;
+        border-bottom: 1px solid #ccc;
+        /* 화살표배경 */
+    }
+
+    .sub-list>.active>a {
+        /* 반대화살표 */
+    }
+
+    .depth {
+        background: #444;
+        padding: 1em 0;
+    }
+
+    .depth>li>a {
+        padding: 1em 2em
+    }
+}
