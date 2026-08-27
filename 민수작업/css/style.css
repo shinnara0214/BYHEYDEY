@@ -1066,9 +1066,13 @@ footer {
     }
 
     .header-inner nav {
-        height: 100vh;
+        position: fixed;
+        width: 100%;
+        right: 0%;
+        top: 0;
         background: #111;
-        display: none;
+        height: 100vh;
+        /* display: none; */
     }
 
     .ham-btn {
@@ -1115,14 +1119,6 @@ footer {
         width: 185px;
     }
 
-    nav {
-        position: fixed;
-        width: 100%;
-        right: 0%;
-        top: 0;
-        background: #111;
-    }
-
     .main-menu {
         flex-direction: column;
         gap: 0;
@@ -1134,6 +1130,7 @@ footer {
         border-bottom: 1px solid rgba(255, 255, 255, 0.5);
         padding: 1em 3em;
         /* 화살표 */
+        font-size: 16px;
     }
 
     .main-menu>.active>a {
@@ -1147,7 +1144,8 @@ footer {
         visibility: visible;
         /* display: none; */
         background: #1D1D1D;
-        padding: 42px 74px 52px 74px;
+        /* justify-content: center; */
+        padding: 42px 0 52px 140px;
         gap: 180px;
     }
 
@@ -1167,6 +1165,7 @@ footer {
     body {
         font-size: 12px;
     }
+    .
 
     .address-right>.footer-menu {
         display: none;
@@ -1186,7 +1185,7 @@ footer {
     }
 
     .sub-list>li>a {
-        padding: 1em 3em;
+        padding: 1em 4em;
         border-bottom: 1px solid rgba(255, 255, 255, 0.2);
         /* 화살표배경 */
     }
@@ -1198,8 +1197,8 @@ footer {
     .depth {
         display: none;
         background: #292929;
-        padding: 1em 5em 2em;
-        gap: 1em;
+        padding: 1em 6em 2em;
+        gap: 1.5em;
     }
 
     .main-menu>li .sub-list>li:hover .depth {
