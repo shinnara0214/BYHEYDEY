@@ -94,7 +94,7 @@ header.is-scrolled:hover {
     max-width: 1920px;
     height: 80px;
     margin: 0 auto;
-    padding: 0 60px;
+    padding: 0 3.75em;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -1179,6 +1179,10 @@ footer {
 @media screen and (max-width:767px) {
     body {
         font-size: 12px;
+    }
+
+    .header-inner{
+         padding: 0 3.75em;
     }
 
     .address-right>.footer-menu {
