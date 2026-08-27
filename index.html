@@ -7,10 +7,10 @@
     <link rel="icon" type="byheydey/favison" href="./images/icon/favicon.png">
     <title>BYHEYDEY</title>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.css"/>
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/font.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
@@ -24,6 +24,16 @@
                     </a>
                 </h1>
                 <nav aria-label="메인 메뉴">
+                    <div class="m-header">
+                        <div>
+                            <p>
+                                <a href="#">
+                                    <img src="./images/icon/header-Logo.png" alt="BYHEYDEY logo">
+                                </a>
+                            </p>
+                            <button class="hamClose"><img src="./images/icon/close.png" alt=""></button>
+                        </div>
+                    </div>
                     <ul class="main-menu">
                         <li>
                             <a href="#" aria-haspopup="true" aria-expanded="false">PRODUCT</a>
@@ -107,6 +117,7 @@
                     </a>
                 </li>
             </ul>
+            <div class="ham-btn"><button><img src="./images/icon/ham.png" alt="ham"></button></div>
         </div>
     </header>
     <!-- 2. main -->
@@ -871,14 +882,30 @@
             loopAdditionalSlides: 4,
         });
 
-         var swiper = new Swiper('.clubmovement-list-wrap', {
+        var swiper = new Swiper('.clubmovement-list-wrap', {
             autoplay: {
                 delay: 3000,
                 disableOnInteraction: false,
             },
+            centeredSlides: false,
             loop: true,
-            slidesPerView: 5,
-            spaceBetween: 35,
+            breakpoints: {
+                1279: {
+                    slidesPerView: 5,
+                    spaceBetween: 35,
+                    centeredSlides: false,
+                },
+                768: {
+                    slidesPerView: 3,
+                    spaceBetween: 30,
+                    centeredSlides: false,
+                },
+                0: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                    centeredSlides: false,
+                },
+            },
         });
 
         document.addEventListener('DOMContentLoaded', () => {

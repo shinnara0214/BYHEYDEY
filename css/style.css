@@ -1,7 +1,24 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+:root {
+    /* Color Variables */
+    --primary-color: #111111;
+    --secondary-color: #ffffff;
+    --bg-color: #EFF2F6;
+    --sub-text-color: rgba(92, 92, 92, 0.8);
+    --border-color: #CACACA;
+
+    /* Layout Variables */
+    --inner-width: 1640px;
+    /* source 1, 2 기준 (source 3: 1700px) */
+}
+
+body {
+    max-width: 100%;
+    margin: 0 auto;
+    font-family: "Pretendard", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--primary-color);
+    background-color: var(--bg-color);
 }
 
 .inner {
@@ -9,38 +26,32 @@
     margin: 0 auto;
 }
 
-.img-box img {
-    width: 100%;
-}
-
-.title-box {
-    padding: 78px 0 0;
-}
-
-.title-box>h2 {
+.title-box .section-title {
     font-size: 2.75em;
+    /* 44px */
     font-weight: 600;
     letter-spacing: -0.05em;
 }
 
 .title-box>.sub-title {
     font-size: 1.25em;
+    /* 20px */
     font-weight: 600;
-    padding-top: 0.5em;
     letter-spacing: 0.06em;
+    line-height: 1.6;
+    padding-top: 0.5em;
 }
 
 .title-box>.detail {
-    color: rgba(92, 92, 92, 0.8);
-    padding: 1.5em 0 1.5em;
+    color: var(--sub-text-color);
     line-height: 1.5em;
+    padding: 1.5em 0;
 }
 
 .btn>a {
-    display: block;
-    background: #EFF2F6;
+    background: var(--bg-color);
     border-radius: 10px;
-    border: #CACACA solid 1px;
+    border: var(--border-color) solid 1px;
     color: #414040;
     padding: 0 24px;
     height: 40px;
@@ -48,28 +59,37 @@
     align-items: center;
 }
 
-body{
-    font-family: 'Pretendard';
-    color: #111111;
+/* -----------------hrader----------------- */
+.ham-btn {
+    display: none;
 }
 
-/* -----------------hrader----------------- */
+.m-header {
+    display: none;
+}
+
 header {
     width: 100%;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 1000;
-    background-color: #111111;
+    /* background-color: #111111; */
     transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
+header:hover {
+    background-color: #111111;
+}
+
 header.is-scrolled {
-    background-color: transparent;
+    background-color: #111;
+    box-shadow: 0 0 20px #fff;
 }
 
 header.is-scrolled:hover {
-    background-color: #111111;
+    background-color: #111;
+    box-shadow: 0 0 20px #fff;
 }
 
 .header-inner {
@@ -109,10 +129,13 @@ header.is-scrolled:hover {
     line-height: 80px;
     font-size: 13px;
     font-weight: 700;
-    color: #888888;
+    /* color: #888888; */
+    color: #ddd;
+    /* color:#111; */
     text-decoration: none;
     letter-spacing: 0.5px;
     transition: color 0.2s ease;
+    text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.15);
 }
 
 .main-menu>li:hover>a,
@@ -151,7 +174,7 @@ header.is-scrolled:hover {
     font-weight: 700;
     color: #ffffff;
     text-decoration: none;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
 }
 
 .depth {
@@ -637,7 +660,8 @@ header:has(.main-menu > li:hover .sub-list)::after {
     max-width: 1920px;
     height: 960px;
     background-color: #EFF2F6;
-    padding: 0 140px; /* 비디오 및 전체 가로 영역 여백 */
+    padding: 0 140px;
+    /* 비디오 및 전체 가로 영역 여백 */
     margin: 0 auto;
     overflow: hidden;
 }
@@ -649,10 +673,12 @@ header:has(.main-menu > li:hover .sub-list)::after {
 /* 텍스트 박스: 비디오 상단 높이 위치에 배치 */
 .care-title-box {
     position: absolute;
-    top: 176px; /* 비디오의 시작 높이와 동일하게 지정 */
+    top: 176px;
+    /* 비디오의 시작 높이와 동일하게 지정 */
     left: 140px;
     width: 420px;
-    padding: 0 !important; /* 기존 .title-box의 상단 패딩 제거 */
+    padding: 0 !important;
+    /* 기존 .title-box의 상단 패딩 제거 */
     z-index: 2;
 }
 
@@ -684,12 +710,17 @@ header:has(.main-menu > li:hover .sub-list)::after {
 }
 
 .care-wrap .btn a {
-    display: inline-flex; /* flex 레이아웃으로 변경 */
-    justify-content: center; /* 가로 중앙 정렬 */
-    align-items: center; /* 세로 중앙 정렬 */
+    display: inline-flex;
+    /* flex 레이아웃으로 변경 */
+    justify-content: center;
+    /* 가로 중앙 정렬 */
+    align-items: center;
+    /* 세로 중앙 정렬 */
     text-align: center;
-    padding: 0 35px; /* 세로 padding 대신 높이(height) 지정 사용시 안정적 */
-    height: 44px; /* 버튼의 세로 높이 지정 */
+    padding: 0 35px;
+    /* 세로 padding 대신 높이(height) 지정 사용시 안정적 */
+    height: 44px;
+    /* 버튼의 세로 높이 지정 */
     background-color: #ffffff;
     color: #414040;
     font-size: 16px;
@@ -721,6 +752,7 @@ header:has(.main-menu > li:hover .sub-list)::after {
     border: none;
     z-index: 1;
 }
+
 /* -----------------------project-------------------------- */
 .project-wrap {
     position: relative;
@@ -809,8 +841,8 @@ header:has(.main-menu > li:hover .sub-list)::after {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.3); 
-    pointer-events: none; 
+    background-color: rgba(0, 0, 0, 0.3);
+    pointer-events: none;
     transition: background-color 0.3s ease;
 }
 
@@ -871,30 +903,30 @@ header:has(.main-menu > li:hover .sub-list)::after {
 }
 
 /* --------------------------clubmovement--------------------------- */
-.clubmovement-wrap {
-    background: #F4F7FF;
-    height: 960px;
+
+.clubmovement-wrap .title-box {
+    padding: 4.88em 0 6.25em;
 }
 
-.clubmovement-list {
-    margin-top: 100px;
-    /* display: flex; */
-    /* gap: 35px; */
-    /* overflow: hidden; */
+.clubmovement-wrap {
+    background: #F4F7FF;
 }
 
 .clubmovement-list>li {
     position: relative;
-    /* flex: 0 0 calc((100% - 140px) / 5); */
 }
 
 .clubmovement-list>li .text-box {
-    display: block;
     position: absolute;
-    top: 2em;
-    left: 1.5em;
-    color: #fff;
     width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2em 1.5em;
+    color: #fff;
+    top: 0;
+    left: 0;
 }
 
 .clubmovement-list>li .text-box>strong {
@@ -903,12 +935,11 @@ header:has(.main-menu > li:hover .sub-list)::after {
 }
 
 .clubmovement-list>li .text-box>p {
-    padding-top: 235px;
     font-weight: 500;
 }
 
 .clubmovement-list>li .img-box>img {
-    border-radius: 16px;
+    border-radius: 10px;
 }
 
 .clubmovement-wrap .btn>a {
@@ -916,14 +947,18 @@ header:has(.main-menu > li:hover .sub-list)::after {
     color: #fff;
 }
 
+.clubmovement-list-wrap {
+    padding-bottom: 11.31em;
+}
+
 /* ----------------------------------footer---------------------------------- */
 footer {
     width: 100%;
-    height: 280px;
+    /* height: 280px; */
     margin: 0 auto;
-    padding: 80px 140px; 
+    padding: 80px 140px;
     box-sizing: border-box;
-    background-color: #000000; 
+    background-color: #000000;
 }
 
 .footer-inner {
@@ -960,11 +995,11 @@ footer {
     padding: 0;
 }
 
-.footer-inner address span + span::before {
+.footer-inner address span+span::before {
     content: "|";
     display: inline-block;
     margin: 0 8px;
-    color: #ffffff !important; 
+    color: #ffffff !important;
     font-size: 10px;
     vertical-align: 1px;
     opacity: 0.5;
@@ -976,13 +1011,13 @@ footer {
 
 .footer-inner .footer-menu {
     display: flex;
-    gap: 40px; 
+    gap: 40px;
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
-.footer-inner .footer-menu > li > strong {
+.footer-inner .footer-menu>li>strong {
     display: block;
     font-size: 13px;
     font-weight: 700;
@@ -991,7 +1026,7 @@ footer {
 }
 
 .footer-inner .sub-link-list {
-    margin-top: 16px; 
+    margin-top: 16px;
     padding: 0;
     list-style: none;
 }
@@ -1013,4 +1048,161 @@ footer {
 
 .footer-inner .sub-link-list a:hover {
     color: #ffffff;
+}
+
+/* 아이패드 */
+@media screen and (max-width:1279px) {
+    body {
+        font-size: 14px;
+    }
+
+    .clubmovement-wrap .title-box {
+        padding-left: 30px;
+    }
+
+    .footer-inner {
+        flex-direction: column;
+        gap: 48px;
+    }
+
+    .header-inner nav {
+        position: fixed;
+        width: 100%;
+        right: 0%;
+        top: 0;
+        background: #111;
+        height: 100vh;
+        /* display: none; */
+    }
+
+    .ham-btn {
+        display: block;
+    }
+
+    header:has(.sub-list:hover)::after,
+    header:has(.main-menu > li:hover .sub-list)::after {
+        opacity: 0;
+    }
+
+    .gnb-list {
+        display: none;
+    }
+
+    .m-header {
+        display: block;
+        /* padding: 1em; */
+    }
+
+    .m-header>div {
+        border-bottom: 2px solid rgba(255, 255, 255, 0.15);
+        padding: 23.5px;
+        position: relative;
+    }
+
+    .m-header>div button {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 1.5em;
+        /* 햄버거 배경 */
+    }
+
+    .m-header>div button.close {
+        /* close 배경 */
+    }
+
+    .m-header>div p {
+        text-align: center;
+    }
+
+    .m-header>div p img {
+        width: 185px;
+    }
+
+    .main-menu {
+        flex-direction: column;
+        gap: 0;
+
+    }
+
+    .main-menu>li>a {
+        line-height: 1.5;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+        padding: 1em 3em;
+        /* 화살표 */
+        font-size: 16px;
+    }
+
+    .main-menu>.active>a {
+        /* 반대화살표 */
+    }
+
+    .sub-list {
+        display: none;
+        position: static;
+        opacity: 0;
+        visibility: visible;
+        /* display: none; */
+        background: #1D1D1D;
+        /* justify-content: center; */
+        padding: 42px 0 52px 140px;
+        gap: 180px;
+    }
+
+    .main-menu>li:hover .sub-list {
+        display: flex;
+        opacity: 1;
+    }
+
+    .sub-list .depth {
+        padding-top: 20px;
+    }
+
+}
+
+/* 핸드폰 */
+@media screen and (max-width:767px) {
+    body {
+        font-size: 12px;
+    }
+
+    .address-right>.footer-menu {
+        display: none;
+    }
+
+    .sub-list {
+        /* flex-direction: column;
+        gap: 1em; */
+        display: none;
+        padding: 0;
+    }
+
+
+    .main-menu>li:hover .sub-list {
+        display: block;
+        opacity: 1;
+    }
+
+    .sub-list>li>a {
+        padding: 1em 4em;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        /* 화살표배경 */
+    }
+
+    .sub-list>.active>a {
+        /* 반대화살표 */
+    }
+
+    .depth {
+        display: none;
+        background: #292929;
+        padding: 1em 6em 2em;
+        gap: 1.5em;
+    }
+
+    .main-menu>li .sub-list>li:hover .depth {
+        display: flex;
+        opacity: 1;
+    }
+
 }
