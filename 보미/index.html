@@ -25,10 +25,18 @@
                         <img src="./images/icon/header-Logo.png" alt="BYHEYDEY logo">
                     </a>
                 </h1>
-                <button type="button" class="close-btn" aria-label="메뉴 닫기">
-                        <i aria-hidden="true"><img src="./images/icon/close_32.svg\" alt="닫기 아이콘"></i>
-                    </button>
                 <nav aria-label="메인 메뉴">
+                    <div class="m-header">
+                        <div>
+                            <p><a href="#">
+                                    <img src="./images/icon/header-Logo.png" alt="BYHEYDEY logo">
+                                </a>
+                            </p>
+                            <button type="button" class="hamClose" aria-label="메뉴 닫기">
+                                <img src="./images/icon/close.png" alt="메뉴 닫기 아이콘">
+                            </button>
+                        </div>
+                    </div>
                     <ul class="main-menu" id="main-menu">
                         <li>
                             <a href="#" aria-haspopup="true" aria-expanded="false">PRODUCT</a>
@@ -111,10 +119,10 @@
                         <span class="cart-count">3</span>
                     </a>
                 </li>
-                <button type="button" class="ham-btn" aria-label="메뉴 열기" aria-expanded="false"
-                    aria-controls="main-navigation">
-                    <img src="./images/icon/ham_32.svg" alt=""></button>
             </ul>
+            <button type="button" class="ham" aria-label="메뉴 열기">
+                <img src="./images/icon/ham.png" alt="메뉴 열기 아이콘">
+            </button>
         </div>
     </header>
     <!-- 2. main -->
@@ -719,19 +727,29 @@
         });
 
         var swiper = new Swiper('.best', {
+            loop: true,
             autoplay: {
                 delay: 3000,
                 disableOnInteraction: false,
             },
-            loop: true,
-            slidesPerView: 4.5,
-            spaceBetween: 36,
-            // centeredSlides: true,
+
+            slidesPerView: 2,
+            spaceBetween: 12,
+            centeredSlides: false,
+
             breakpoints: {
-                0: { slidesPerView: 1.35, spaceBetween: 16 },
-                481: { slidesPerView: 2.2, spaceBetween: 20 },
-                768: { slidesPerView: 3.2, spaceBetween: 24 },
-                1280: { slidesPerView: 4.5, spaceBetween: 36 }
+                768: {
+                    slidesPerView: 3,
+                    spaceBetween: 18,
+                },
+                1024: {
+                    slidesPerView: 4,
+                    spaceBetween: 24,
+                },
+                1400: {
+                    slidesPerView: 5,
+                    spaceBetween: 36,
+                },
             },
         });
 
@@ -740,9 +758,25 @@
                 delay: 3000,
                 disableOnInteraction: false,
             },
+            centeredSlides: false,
             loop: true,
-            slidesPerView: 5,
-            spaceBetween: 35,
+            breakpoints: {
+                1279: {
+                    slidesPerView: 5,
+                    spaceBetween: 35,
+                    centeredSlides: false,
+                },
+                768: {
+                    slidesPerView: 3,
+                    spaceBetween: 30,
+                    centeredSlides: false,
+                },
+                0: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                    centeredSlides: false,
+                },
+            },
         });
 
         // document.addEventListener('DOMContentLoaded', () => {
@@ -769,6 +803,11 @@
             } else {
                 header.classList.remove('is-scrolled');
             }
+
+
+
+
+
         });
     </script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
